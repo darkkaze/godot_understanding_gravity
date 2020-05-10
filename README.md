@@ -2,7 +2,7 @@
 
 This code is writed for try to understand the kinematicbody2d  and the move_and_slide
 
-a lot of tutorial around the internet put a "random value" in gravity for simulate the physics in godot games.  but what happen if you want to control  de time  of the object falling a controlate distance (like N time her body size.)
+a lot of tutorial around the internet put a "random value" in gravity for simulate the physics in godot games.  but what happen if you want a specific time in the object falling a specific distance. (like N time her body size.)
 
 gravity is a aceleration value.  so the normal solution could be this
 

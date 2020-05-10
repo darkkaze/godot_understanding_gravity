@@ -24,3 +24,12 @@ shape = SubResource( 1 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
 position = Vector2( 512, 304 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_left = 448.45
+margin_top = 279.97
+margin_right = 488.45
+margin_bottom = 319.97
+__meta__ = {
+"_edit_use_anchors_": false
+}

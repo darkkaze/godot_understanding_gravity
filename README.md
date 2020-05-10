@@ -1,4 +1,4 @@
-# looking for the perfect gravity value i found a problem and the solution.
+# looking for the perfect gravity value, i found a problem... and the solution too.
 
 This code is writed for try to understand the kinematicbody2d  and the move_and_slide
 

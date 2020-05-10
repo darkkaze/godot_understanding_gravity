@@ -1,8 +1,8 @@
 # looking for the perfect gravity value, i found a problem... and the solution too.
 
-This code is writed for try to understand the kinematicbody2d  and the move_and_slide
+## This code is writed for try to understand the kinematicbody2d  and the move_and_slide
 
-a lot of tutorial around the internet put a "random value" in gravity for simulate the physics in godot games.  but what happen if you want to control  de time  of the object falling a controlate distance (like N time her body size.)
+a lot of tutorial around the internet put a "random value" in gravity for simulate the physics in godot games.  but what happen if you want a specific time in the object falling a specific distance. (like N time her body size.)
 
 gravity is a aceleration value.  so the normal solution could be this
 
@@ -16,7 +16,8 @@ gravity is a aceleration value.  so the normal solution could be this
 So if the object have a height of 32px the GRAVITY value is 32 * 6 = 192... in theory the object arrive to the floor in 1 second.
 but this don't happen, the object arrive in 1.3 seconds.
 
-the problem is the move_and_slide,  this method do a extra delta multiplication.
+the problem is the move_and_slide,  this method do a extra delta multiplication. why? well, move_and_slide receive a linear_velocity, and this value is in pixels * second.  _physics_process is called each time that main loop complete a cycle. so...  move_and_slide are doing a operation on seconds in an fraction of seconds.
+
 if we want to arrive to the floor in half second the theory says that we can use 32 * 6 * 2 = 384  but aggain the double delta multiplications affect the theory and the object arrive in 0.7 seconds.
 
 if we want to arrive to the floor in 5 seconds the theory says that we can use 32 * 6 * 0.2 = 38.4 but aggain the double delta multiplications affect the theory and the object arrive in 3 seconds.
